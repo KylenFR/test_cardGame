@@ -34,3 +34,12 @@ function playerDrawCard()
   table.insert(players[1].hand, cardDrawn)
   table.remove(players[1].deck, cardIndex)
 end
+
+
+function playerSummonMonster(monstre, monsterIndex)
+
+
+
+  table.insert(players[1].board, monstre)
+  table.remove(players[1].hand, monsterIndex)
+end
