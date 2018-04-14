@@ -36,10 +36,15 @@ function playerDrawCard()
 end
 
 
-function playerSummonMonster(monstre, monsterIndex)
+function playerSummonMonster(monster, monsterIndex)
 
-
-
-  table.insert(players[1].board, monstre)
+  table.insert(players[1].board, monster)
   table.remove(players[1].hand, monsterIndex)
+end
+
+
+function playerKillMonster(monster, monsterIndex)
+
+  table.insert(players[1].graveyard, monster)
+  table.remove(players[1].board, monsterIndex)
 end
